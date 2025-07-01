@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
-import { Payload } from "../models/interfaces/user/auth/Payload";
+import { Payload } from "../models/interfaces/user/auth/payload.interface";
 
 export function isAuthenticated(
   request: Request,

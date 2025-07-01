@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import CreateUserService from "../../services/user/create-user.service";
-import { UserRequest } from "../../models/interfaces/user/UserRequest";
+import { UserRequest } from "../../models/interfaces/user/user-request.interface";
 
 class CreateUserController {
 

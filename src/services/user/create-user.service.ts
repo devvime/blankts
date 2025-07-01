@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma";
 import { hash } from "bcryptjs";
-import { UserRequest } from "../../models/interfaces/user/UserRequest";
+import { UserRequest } from "../../models/interfaces/user/user-request.interface";
 import createUserDTO from "../../dtos/user/create-user.dto";
 
 class CreateUserService {

@@ -1,4 +1,4 @@
-import { UserRequest } from "../../models/interfaces/user/UserRequest";
+import { UserRequest } from "../../models/interfaces/user/user-request.interface";
 
 export default function createUserDTO(user: UserRequest) {
   if (!user.email) {
