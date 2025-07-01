@@ -1,10 +1,9 @@
-### Register new user 
-POST {{baseURL}}/user 
+### Auth
+POST {{baseURL}}/session 
 Content-Type: application/json 
 Authorization: Bearer {{token}}
 
 {
-  "name": "admin2", 
   "email": "admin2@admin.com", 
   "password": "admin"
 }

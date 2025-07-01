@@ -1,0 +1,4 @@
+### Me 
+GET {{baseURL}}/me 
+Content-Type: application/json 
+Authorization: Bearer {{token}}

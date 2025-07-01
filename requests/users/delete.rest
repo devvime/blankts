@@ -1,0 +1,4 @@
+### Delete
+DELETE {{baseURL}}/user/ee263b27-3981-4ced-a83e-50203bd7791a 
+Content-Type: application/json 
+Authorization: Bearer {{token}}
