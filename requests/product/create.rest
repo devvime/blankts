@@ -1,0 +1,11 @@
+### Create new Product 
+POST {{baseURL}}/product
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data
+
+name=Product 1
+price=150
+description=bla bla bla
+amount=10
+category_id=6c2a4304-301e-4a24-8cc7-2b7f95792d63
+file=@./image/car1.jpg;type=image/jpeg
