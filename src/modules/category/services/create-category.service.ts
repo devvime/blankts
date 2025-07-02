@@ -1,9 +1,9 @@
 import prismaClient from "../../../common/prisma";
 import createCategoryDTO from "../dtos/create-category.dto";
-import { CategoryRequest } from "../interfaces/category-request.interface";
+import { CreateCategoryRequest } from "../types/create-request.interface";
 
 class CreateCategoryService {
-  async execute(category: CategoryRequest) {
+  async execute(category: CreateCategoryRequest) {
     createCategoryDTO(category);
     const result = await prismaClient.category.create({
       data: {

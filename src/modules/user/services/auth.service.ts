@@ -1,8 +1,8 @@
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import prismaClient from "../../../common/prisma";
-import { AuthRequest } from "../interfaces/auth/auth-request.interface";
-import authUserDTO from "../dtos/auth-user.dto";
+import { AuthRequest } from "../types/auth/auth-request.interface";
+import authUserDTO from "../dtos/auth.dto";
 
 class AuthUserService {
 

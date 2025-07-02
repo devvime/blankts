@@ -1,9 +1,9 @@
 import { Router } from "express";
-import CreateUserController from "../controllers/create-user.controller";
-import AuthUserController from "../controllers/auth-user.controller";
-import DetailUserController from "../controllers/detail-user.controller";
+import CreateUserController from "../controllers/create.controller";
+import AuthUserController from "../controllers/auth.controller";
+import DetailUserController from "../controllers/detail.controller";
 import { isAuthenticated } from "../../../common/middlewares/is-authenticated.middleware";
-import RemoveUserController from "../controllers/remove-user.controller";
+import RemoveUserController from "../controllers/remove.controller";
 
 const userRoutes = Router();
 

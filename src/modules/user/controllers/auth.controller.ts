@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import AuthUserService from "../services/auth-user.service";
-import { AuthRequest } from "../interfaces/auth/auth-request.interface";
+import AuthUserService from "../services/auth.service";
+import { AuthRequest } from "../types/auth/auth-request.interface";
 
 class AuthUserController {
 

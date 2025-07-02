@@ -1,11 +1,11 @@
 import prismaClient from "../../../common/prisma";
 import { hash } from "bcryptjs";
-import { UserRequest } from "../interfaces/user-request.interface";
-import createUserDTO from "../dtos/create-user.dto";
+import { CreateUserRequest } from "../types/create-request.interface";
+import createUserDTO from "../dtos/create.dto";
 
 class CreateUserService {
 
-  async execute(user: UserRequest) {
+  async execute(user: CreateUserRequest) {
     createUserDTO(user);
 
     const userAlreadyExists = await prismaClient.user.findFirst({
