@@ -1,0 +1,8 @@
+### Create new Category 
+POST {{baseURL}}/category
+Content-Type: application/json 
+Authorization: Bearer {{token}}
+
+{
+  "name": "category2"
+}
