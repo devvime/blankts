@@ -1,0 +1,4 @@
+### LIst categories
+GET {{baseURL}}/category
+Content-Type: application/json 
+Authorization: Bearer {{token}}

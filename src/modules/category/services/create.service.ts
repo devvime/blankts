@@ -1,5 +1,5 @@
 import prismaClient from "../../../common/prisma";
-import createCategoryDTO from "../dtos/create-category.dto";
+import createCategoryDTO from "../dtos/create.dto";
 import { CreateCategoryRequest } from "../types/create-request.interface";
 
 class CreateCategoryService {

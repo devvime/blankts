@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { CreateCategoryRequest } from "../types/create-request.interface";
-import CreateCategoryService from "../services/create-category.service";
+import CreateCategoryService from "../services/create.service";
 
 class CreateCategoryController {
 
