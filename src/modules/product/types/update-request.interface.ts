@@ -5,4 +5,5 @@ export interface UpdateProductRequest {
   description: string;
   banner: string;
   amount: number;
+  categoryId: string;
 }

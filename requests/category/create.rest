@@ -4,5 +4,5 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "name": "category2"
+  "name": "category1"
 }

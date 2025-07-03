@@ -1,0 +1,4 @@
+### List categories
+GET {{baseURL}}/product?category_id=aa2b83a0-4dbb-40a0-bfbc-b4258e71fc28
+Content-Type: application/json 
+Authorization: Bearer {{token}}

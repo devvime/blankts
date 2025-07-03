@@ -25,7 +25,8 @@ class EditProductService {
         description: product.description,
         price: product.price,
         amound: Number(product.amount),
-        banner: product.banner
+        banner: product.banner,
+        categoryId: product.categoryId
       }
     });
     return result;
