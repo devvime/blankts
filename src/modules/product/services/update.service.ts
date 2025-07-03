@@ -10,11 +10,7 @@ class EditProductService {
       }
     });
     if (!productExists) {
-      return {
-        status: 404,
-        error: true,
-        message: "Product is not found."
-      }
+      throw new Error("Product is not found.");
     }
     const result = await prismaClient.product.update({
       where: {
