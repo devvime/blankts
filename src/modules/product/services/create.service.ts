@@ -1,12 +1,9 @@
 import prismaClient from "../../../common/prisma";
-import createProductDTO from "../dtos/create.dto";
 import { CreateProductRequest } from "../types/create-request.interface";
 
 class CreateProductService {
 
   async execute(product: CreateProductRequest) {
-    createProductDTO(product);
-
     const result = await prismaClient.product.create({
       data: {
         name: product.name,

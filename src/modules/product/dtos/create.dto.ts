@@ -1,6 +1,9 @@
 import { CreateProductRequest } from "../types/create-request.interface"
 
-export default function createProductDTO(product: CreateProductRequest) {
+export default function createProductDTO(product: CreateProductRequest, file) {
+  if (!file) {
+    throw new Error("Error sending image.")
+  }
   if (
     !product.name ||
     !product.price ||
