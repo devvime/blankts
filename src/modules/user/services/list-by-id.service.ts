@@ -17,7 +17,10 @@ class DetailUserService {
           updated_at: true
         }
       });
-      return user;
+      if (user) {
+        return user;
+      }
+      throw new Error("User is not found.")
     }
 
   }

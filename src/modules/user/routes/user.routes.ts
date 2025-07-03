@@ -1,15 +1,16 @@
 import { Router } from "express";
-import CreateUserController from "../controllers/create.controller";
-import AuthUserController from "../controllers/auth.controller";
-import DetailUserController from "../controllers/detail.controller";
-import { isAuthenticated } from "../../../common/middlewares/is-authenticated.middleware";
-import RemoveUserController from "../controllers/remove.controller";
+import authUserController from "../controllers/auth.controller";
+import { isAuthenticated } from "../../../middlewares/is-authenticated.middleware";
+import userController from "../controllers/user.controller";
 
 const userRoutes = Router();
 
-userRoutes.post('/user', CreateUserController.handle);
-userRoutes.delete('/user/:id', isAuthenticated, RemoveUserController.handle);
-userRoutes.get('/me', isAuthenticated, DetailUserController.handle);
-userRoutes.post('/session', AuthUserController.handle);
+userRoutes.post('/session', authUserController.handle);
+userRoutes.get('/user', isAuthenticated, userController.index);
+userRoutes.get('/user/me', isAuthenticated, userController.show);
+userRoutes.get('/user/:id', isAuthenticated, userController.show);
+userRoutes.post('/user', userController.store);
+userRoutes.put('/user', isAuthenticated, userController.update);
+userRoutes.delete('/user/:id', isAuthenticated, userController.destroy);
 
 export default userRoutes;

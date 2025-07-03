@@ -1,8 +1,8 @@
 import express from "express";
-import { serverError } from "../common/middlewares/error.middleware";
-import userRoutes from '../modules/user/routes/user.routes';
-import categoryRoutes from "../modules/category/routes/category.routes";
-import productRoutes from "../modules/product/routes/product.routes";
+import { serverError } from "./middlewares/error.middleware";
+import userRoutes from './modules/user/routes/user.routes';
+import categoryRoutes from "./modules/category/routes/category.routes";
+import productRoutes from "./modules/product/routes/product.routes";
 
 const app = express();
 

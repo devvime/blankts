@@ -1,4 +1,4 @@
-### Me 
-GET {{baseURL}}/user/me
+### List all users 
+GET {{baseURL}}/user 
 Content-Type: application/json 
 Authorization: Bearer {{token}}

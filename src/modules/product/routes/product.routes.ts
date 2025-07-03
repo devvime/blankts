@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { isAuthenticated } from "../../../common/middlewares/is-authenticated.middleware";
+import { isAuthenticated } from "../../../middlewares/is-authenticated.middleware";
 import { upload } from "../../../shared/upload";
 import CreateProductController from "../controllers/create.controller";
 import UpdateProductController from "../controllers/update.controller";

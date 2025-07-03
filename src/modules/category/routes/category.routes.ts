@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { isAuthenticated } from "../../../common/middlewares/is-authenticated.middleware";
+import { isAuthenticated } from "../../../middlewares/is-authenticated.middleware";
 import CreateCategoryController from "../controllers/create.controller";
 import EditCategoryController from "../controllers/edit.controller";
 import ListCategoryController from "../controllers/list.controller";

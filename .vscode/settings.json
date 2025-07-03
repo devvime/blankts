@@ -5,7 +5,7 @@
   "rest-client.environmentVariables": {
     "$shared": {
       "baseURL": "http://localhost:3333",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4yIiwiZW1haWwiOiJhZG1pbjJAYWRtaW4uY29tIiwiaWF0IjoxNzUxNDE3NDEwLCJleHAiOjE3NTQwMDk0MTAsInN1YiI6IjBlYzVkZGVjLTg3ZDctNDRiNy1hNzFjLTdhZDA0NGY0NTMyYSJ9.I7GMQ17_D8Fhu1w0TWwehky8NVR2SmYvkySQDlDkbxs"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4yIiwiZW1haWwiOiJhZG1pbjJAYWRtaW4uY29tIiwiaWF0IjoxNzUxNTQ5OTU0LCJleHAiOjE3NTQxNDE5NTQsInN1YiI6IjBlYzVkZGVjLTg3ZDctNDRiNy1hNzFjLTdhZDA0NGY0NTMyYSJ9.myYjdlW8cD22kiwvXQN0D4ZOrz7SCCo7oKTJGqBuZIY"
     }
   }
 }

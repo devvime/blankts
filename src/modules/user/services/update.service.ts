@@ -1,12 +1,10 @@
 import prismaClient from "../../../common/prisma";
 import { hash } from "bcryptjs";
 import { CreateUserRequest } from "../types/create-request.interface";
-import createUserDTO from "../dtos/create.dto";
 
-class CreateUserService {
+class UpdateUserService {
 
-  async execute(user: CreateUserRequest) {
-    createUserDTO(user);
+  async execute(id: string, user: CreateUserRequest) {
     try {
       const userAlreadyExists = await prismaClient.user.findFirst({
         where: {
@@ -14,13 +12,15 @@ class CreateUserService {
         }
       });
 
-      if (userAlreadyExists) {
-        throw new Error("Email already exists.");
+      if (!userAlreadyExists) {
+        throw new Error("User is not found.");
       }
 
       const passwordHash = await hash(user.password, 8);
-
-      const result = await prismaClient.user.create({
+      const result = await prismaClient.user.update({
+        where: {
+          id
+        },
         data: {
           name: user.name,
           email: user.email,
@@ -34,6 +34,7 @@ class CreateUserService {
       });
 
       return result;
+
     } catch (error) {
       throw new Error(error);
     }
@@ -41,4 +42,4 @@ class CreateUserService {
 
 }
 
-export default new CreateUserService();
+export default new UpdateUserService();
