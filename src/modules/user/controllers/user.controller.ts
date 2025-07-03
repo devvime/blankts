@@ -5,8 +5,9 @@ import CreateUserService from "../services/create.service";
 import UpdateUserService from "../services/update.service";
 import RemoveUserService from "../services/destroy.service";
 import ListUserService from "../services/list.service";
+import Controller from "@shared/types/controller.interface";
 
-class UserController {
+class UserController implements Controller {
 
   async index(request: Request, response: Response) {
     const users = await ListUserService.execute();

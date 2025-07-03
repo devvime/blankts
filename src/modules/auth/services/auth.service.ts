@@ -1,10 +1,10 @@
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import prismaClient from "../../../common/prisma";
-import { AuthRequest } from "../types/auth/auth-request.interface";
+import { AuthRequest } from "../types/auth-request.interface";
 import authUserDTO from "../dtos/auth.dto";
 
-class AuthUserService {
+class AuthService {
 
   async execute(data: AuthRequest) {
     authUserDTO(data);
@@ -46,4 +46,4 @@ class AuthUserService {
 
 }
 
-export default new AuthUserService();
+export default new AuthService();
