@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "start": "node dist/common/bootstrap.js",
     "dev": "ts-node-dev --transpile-only src/main.ts",
     "generate:dev": "prisma generate --generator client_dev",
-    "generate:prod": "prisma generate --generator client_prod"
+    "generate:prod": "prisma generate --generator client_prod",
+    "build": "concurrently \"tsc\" \"npm run generate:prod\""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/multer": "^2.0.0",
+    "concurrently": "^9.2.0",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
