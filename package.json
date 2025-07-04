@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/main.ts"
+    "build": "tsc",
+    "start": "node dist/common/bootstrap.js",
+    "dev": "ts-node-dev --transpile-only src/main.ts",
+    "generate:dev": "prisma generate --generator client_dev",
+    "generate:prod": "prisma generate --generator client_prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "_moduleAliases": {
+    "@common": "dist/common",
+    "@modules": "dist/modules",
+    "@middlewares": "dist/middlewares",
+    "@shared": "dist/shared"
+  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.19",
@@ -26,6 +36,7 @@
     "express": "^4.16.2",
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
     "multer": "^2.0.1",
     "prisma": "^6.10.1"
   }

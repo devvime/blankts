@@ -1,4 +1,4 @@
-import prismaClient from "../../../common/prisma";
+import prismaClient from "@common/prisma";
 import { RemoveUserRequest } from "../types/remove-request.interface";
 
 class RemoveUserService {

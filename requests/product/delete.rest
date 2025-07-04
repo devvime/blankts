@@ -1,4 +1,0 @@
-### Delete categories
-DELETE {{baseURL}}/product/60ebdb14-d3e9-4509-b265-4bb5523d662f
-Content-Type: application/json 
-Authorization: Bearer {{token}}

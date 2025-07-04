@@ -1,4 +1,0 @@
-### Remove categories
-DELETE {{baseURL}}/category/0b098412-a4c8-4223-99c5-95f14dd0208c
-Content-Type: application/json 
-Authorization: Bearer {{token}}
